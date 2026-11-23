@@ -1,0 +1,238 @@
+export interface TemplateItem {
+  id: string;
+  title: string;
+  category: "SaaS" | "Lead Gen" | "Agency" | "Ecommerce" | "Events" | "Consulting";
+  goal: "Lead Generation" | "Click-Through" | "Product Launch" | "Event Registration";
+  avgCvr: string;
+  description: string;
+  themeColor: string;
+  accentColor: string;
+  previewType: "saas" | "leadgen" | "agency" | "ecom" | "events" | "consulting";
+  stats: {
+    bounceRate: string;
+    mobileScore: string;
+    avgLift: string;
+  };
+  conversionHighlights: string[];
+  features: string[];
+}
+
+export const TEMPLATES_DATA: TemplateItem[] = [
+  {
+    id: "apex-saas",
+    title: "Apex SaaS Demo & Trial",
+    category: "SaaS",
+    goal: "Product Launch",
+    avgCvr: "24.8% CVR",
+    description: "Engineered for B2B product demos and self-serve trials with dual CTA flow, trust logos, and interactive preview.",
+    themeColor: "#0033FF",
+    accentColor: "#00C48C",
+    previewType: "saas",
+    stats: {
+      bounceRate: "28%",
+      mobileScore: "99/100",
+      avgLift: "+42%",
+    },
+    conversionHighlights: ["High ad Quality Score layout", "Frictionless work-email single-field capture", "G2 & Trustpilot proof badges"],
+    features: ["Split-screen hero with interactive dashboard", "Multi-tier pricing comparison cards", "Trust logos + G2 badge integration"],
+  },
+  {
+    id: "pulse-leadgen",
+    title: "Pulse Multi-Step Lead Gen",
+    category: "Lead Gen",
+    goal: "Lead Generation",
+    avgCvr: "21.4% CVR",
+    description: "High-intent qualification funnel with progressive disclosure form fields, validation, and instant CRM routing.",
+    themeColor: "#FF4F38",
+    accentColor: "#0033FF",
+    previewType: "leadgen",
+    stats: {
+      bounceRate: "22%",
+      mobileScore: "100/100",
+      avgLift: "+38%",
+    },
+    conversionHighlights: ["Low-friction 3-step micro-form", "Hidden UTM tracking fields", "Instant SMS/Email verification hook"],
+    features: ["3-step micro-survey form with progress bar", "Dynamic UTM query parameter capture", "Phone number SMS verification hook"],
+  },
+  {
+    id: "vanguard-agency",
+    title: "Vanguard Agency Client Pitch",
+    category: "Agency",
+    goal: "Lead Generation",
+    avgCvr: "19.2% CVR",
+    description: "High-ticket client acquisition page with portfolio case study showcases, client ROI metrics, and calendar bookings.",
+    themeColor: "#141414",
+    accentColor: "#FFB800",
+    previewType: "agency",
+    stats: {
+      bounceRate: "31%",
+      mobileScore: "98/100",
+      avgLift: "+29%",
+    },
+    conversionHighlights: ["Real ROI client metric counters", "1-click discovery call booking", "Transparent tier breakdown"],
+    features: ["Case study metrics card with client quotes", "Embedded 1-on-1 discovery calendar", "Transparent service package breakdown"],
+  },
+  {
+    id: "lumina-ecom",
+    title: "Lumina DTC Product Drop",
+    category: "Ecommerce",
+    goal: "Product Launch",
+    avgCvr: "26.5% CVR",
+    description: "Flash sale and hero product landing page with bundle selectors, stock tickers, and sticky mobile checkout bar.",
+    themeColor: "#00C48C",
+    accentColor: "#FF4F38",
+    previewType: "ecom",
+    stats: {
+      bounceRate: "19%",
+      mobileScore: "100/100",
+      avgLift: "+51%",
+    },
+    conversionHighlights: ["Bundle pricing tier toggles", "Urgency stock countdown counter", "Sticky mobile checkout bar"],
+    features: ["Quantity bundle pricing toggles (Buy 2 Get 1)", "Verified buyer photo review masonry", "Sticky bottom mobile 'Add to Cart' bar"],
+  },
+  {
+    id: "summit-events",
+    title: "Summit Live Virtual Webinar",
+    category: "Events",
+    goal: "Event Registration",
+    avgCvr: "32.1% CVR",
+    description: "Virtual conference & event registration page with live countdown timer, speaker roster, and 1-click calendar sync.",
+    themeColor: "#7928CA",
+    accentColor: "#0033FF",
+    previewType: "events",
+    stats: {
+      bounceRate: "16%",
+      mobileScore: "99/100",
+      avgLift: "+47%",
+    },
+    conversionHighlights: ["Live countdown clock with timezone auto-detect", "Speaker credibility badges", "1-click Google Calendar add"],
+    features: ["Dynamic urgency countdown clock", "Speaker headshot & bio popovers", "1-click 'Add to Google / Outlook Calendar'"],
+  },
+  {
+    id: "strata-consulting",
+    title: "Strata Executive Advisory",
+    category: "Consulting",
+    goal: "Lead Generation",
+    avgCvr: "18.9% CVR",
+    description: "Authoritative consultation booking page for management, legal, and financial specialists targeting enterprise executives.",
+    themeColor: "#0033FF",
+    accentColor: "#FFB800",
+    previewType: "consulting",
+    stats: {
+      bounceRate: "26%",
+      mobileScore: "100/100",
+      avgLift: "+33%",
+    },
+    conversionHighlights: ["Enterprise credential strip", "Interactive audit questionnaire", "SOC-2 / NDA privacy pledge"],
+    features: ["Executive credential badge bar", "Interactive ROI audit questionnaire", "High-security compliance & NDA notice"],
+  },
+  {
+    id: "novaflow-crm",
+    title: "NovaFlow AI Pipeline CRM",
+    category: "SaaS",
+    goal: "Click-Through",
+    avgCvr: "22.8% CVR",
+    description: "High-contrast software page highlighting automated workflow speeds and pipeline visibility with video demo popup.",
+    themeColor: "#0033FF",
+    accentColor: "#00C48C",
+    previewType: "saas",
+    stats: {
+      bounceRate: "24%",
+      mobileScore: "100/100",
+      avgLift: "+36%",
+    },
+    conversionHighlights: ["Interactive product tour video preview", "Comparison table vs legacy CRMs", "Sub-second mobile hydration"],
+    features: ["Interactive product tour modal", "Side-by-side feature comparison matrix", "Integrations marquee for Slack & HubSpot"],
+  },
+  {
+    id: "solarprime-energy",
+    title: "SolarPrime Residential Quote",
+    category: "Lead Gen",
+    goal: "Lead Generation",
+    avgCvr: "20.7% CVR",
+    description: "Zip code qualified solar energy savings estimator form optimized for Meta & Google Search ad traffic.",
+    themeColor: "#FFB800",
+    accentColor: "#0033FF",
+    previewType: "leadgen",
+    stats: {
+      bounceRate: "21%",
+      mobileScore: "99/100",
+      avgLift: "+34%",
+    },
+    conversionHighlights: ["Zip code auto-qualification step", "Estimated utility savings counter", "Zero commitment disclaimer"],
+    features: ["Zip-code lookup qualification form", "Interactive energy savings calculator", "Customer testimonial verification pill"],
+  },
+  {
+    id: "aura-app",
+    title: "Aura Mobile App Waitlist",
+    category: "SaaS",
+    goal: "Product Launch",
+    avgCvr: "29.4% CVR",
+    description: "Viral pre-launch waitlist page with referral reward milestone bar and instant Apple App Store / TestFlight badge.",
+    themeColor: "#7928CA",
+    accentColor: "#FF4F38",
+    previewType: "saas",
+    stats: {
+      bounceRate: "18%",
+      mobileScore: "100/100",
+      avgLift: "+45%",
+    },
+    conversionHighlights: ["Viral referral queue position tracker", "One-click social share incentives", "iOS & Android badge preview"],
+    features: ["Waitlist position tracker pill", "Referral tier rewards unlocked list", "Mobile app mock framing with floating UI"],
+  },
+  {
+    id: "catalyst-growth",
+    title: "Catalyst Performance Studio",
+    category: "Agency",
+    goal: "Lead Generation",
+    avgCvr: "17.8% CVR",
+    description: "Performance marketing agency page with case-study revenue graphs, audit request form, and ROAS guarantee.",
+    themeColor: "#141414",
+    accentColor: "#0033FF",
+    previewType: "agency",
+    stats: {
+      bounceRate: "33%",
+      mobileScore: "98/100",
+      avgLift: "+27%",
+    },
+    conversionHighlights: ["Proof-driven ROAS case study widgets", "Audit application form", "Direct founder calendar hook"],
+    features: ["Interactive ROAS revenue chart", "Audit qualification application", "Partner certification badges"],
+  },
+  {
+    id: "zenith-fitness",
+    title: "Zenith Activewear Launch",
+    category: "Ecommerce",
+    goal: "Click-Through",
+    avgCvr: "25.2% CVR",
+    description: "High-energy lifestyle e-commerce landing page with color swatch selectors, size guide modal, and limited stock counter.",
+    themeColor: "#FF4F38",
+    accentColor: "#141414",
+    previewType: "ecom",
+    stats: {
+      bounceRate: "20%",
+      mobileScore: "100/100",
+      avgLift: "+41%",
+    },
+    conversionHighlights: ["Instant color swatch preview switcher", "Real-time stock reservation timer", "100% money-back guarantee badge"],
+    features: ["Color swatch and size selector buttons", "Customer photo review carousel", "Sticky mobile buy button"],
+  },
+  {
+    id: "horizon-summit",
+    title: "Horizon Growth Summit 2026",
+    category: "Events",
+    goal: "Event Registration",
+    avgCvr: "30.6% CVR",
+    description: "Multi-track marketing conference pass landing page with early-bird pricing countdown and agenda schedule tabs.",
+    themeColor: "#0033FF",
+    accentColor: "#FFB800",
+    previewType: "events",
+    stats: {
+      bounceRate: "17%",
+      mobileScore: "99/100",
+      avgLift: "+44%",
+    },
+    conversionHighlights: ["Early-bird ticket tier discount countdown", "Multi-stage agenda scheduler", "Group registration discount toggle"],
+    features: ["Tiered pass pricing cards (Virtual & VIP)", "Interactive conference agenda tabs", "Sponsor and speaker marquee"],
+  },
+];
+
